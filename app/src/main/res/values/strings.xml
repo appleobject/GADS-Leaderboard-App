@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">LeaderBoard</string>
+    <string name="name">Name</string>
+    <string name="hour">Hour ,</string>
+    <string name="country">Country</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="leader_fragment">Learning Leaders</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="skill_fragment">Skill IQ Leaders</string>
+    <string name="tab_text_1">Learning Leaders</string>
+    <string name="tab_text_2">Skill IQ Leaders</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_on_github_link">Project on Github(Link)</string>
+    <string name="skilliq_score">skillIq Score,</string>
+    <string name="submit">Submit</string>
+    <string name="submitButton">Submit</string>
+
+    <!-- Alert Dialog -->
+    <string name="dialogTitle"> Are you sure ?</string>
+    <string name="submission">Submission Successful</string>
+    <string name="notSuccessful"> \n Submission not Successful</string>
+    <string name="yes">Yes</string>
+    <string name="error_with_submission">Error with submission</string>
+    <string name="are_you_sure">Are you sure?</string>
 </resources>
