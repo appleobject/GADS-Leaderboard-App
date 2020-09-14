@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.appleobject.leaderboard.R
 import com.appleobject.leaderboard.retrofit.LearnersRetrofit
 import com.appleobject.leaderboard.retrofit.ServiceBuilder
@@ -50,10 +51,16 @@ class SkillLeadersFragment : Fragment() {
         // Inflate the layout for this fragment
       val view = inflater.inflate(R.layout.fragment_skill_leaders, container, false)
 
-
-        initSkillRecycler(view)
-        passData()
+        Log.d(TAG, "onCreateView: is called...")
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initSkillRecycler()
+        passData()
+        Log.d(TAG, "onViewCreated: is called...")
+
     }
 
     private fun passData() {
@@ -76,12 +83,12 @@ class SkillLeadersFragment : Fragment() {
         })
     }
 
-    private fun initSkillRecycler(view: View) {
-        view.recyclerSkills.apply {
-            skillAdapter = SkillAdapter()
-            adapter = skillAdapter
-            layoutManager = LinearLayoutManager(view.context)
-        }
+    private fun initSkillRecycler() {
+
+        val skillRecycler = view?.findViewById<RecyclerView>(R.id.recyclerSkills)
+        skillAdapter = SkillAdapter()
+        skillRecycler?.adapter = skillAdapter
+        skillRecycler?.layoutManager = LinearLayoutManager(context)
     }
 
     companion object {

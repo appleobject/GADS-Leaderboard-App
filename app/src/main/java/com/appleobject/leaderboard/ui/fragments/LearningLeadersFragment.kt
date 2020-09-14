@@ -57,18 +57,26 @@ class LearningLeadersFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_learning_leaders, container, false)
 
-        initRecyclerView(view)
-        loadHours()
+
+
+
+
         Log.d(TAG, "onCreateView: is called")
         return view
     }
 
-    private fun initRecyclerView(view: View) {
-        view.recyclerLearner.apply {
-            learnAdapter = LearnerAdapter()
-            adapter = learnAdapter
-            layoutManager = LinearLayoutManager(context)
-        }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initRecyclerView()
+        loadHours()
+        Log.d(TAG, "onViewCreated: is called...")
+    }
+
+    private fun initRecyclerView() {
+        val leaderRecycler = view?.findViewById<RecyclerView>(R.id.recyclerLearner)
+        learnAdapter = LearnerAdapter()
+        leaderRecycler?.adapter = learnAdapter
+        leaderRecycler?.layoutManager = LinearLayoutManager(context)
 
 
     }

@@ -25,9 +25,10 @@ class LearnerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when(holder){
-            is LearnerViewHolder -> {
+            is LearnerViewHolder ->{
                 holder.bind(learners[position])
             }
+
         }
     }
 
@@ -35,9 +36,10 @@ class LearnerAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     fun submitList(learnerList: List<Learners>){
         learners = learnerList
+        notifyDataSetChanged()
     }
 
-    class LearnerViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class LearnerViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val learnerName: TextView = itemView.learnerName
         private val learnHour: TextView = itemView.learnerHour

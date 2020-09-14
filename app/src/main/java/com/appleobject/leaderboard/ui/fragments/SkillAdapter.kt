@@ -61,5 +61,6 @@ class SkillAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     fun submitSkillList(skilliqList: List<Skilliq>){
         skillList = skilliqList
+        notifyDataSetChanged()
     }
 }
