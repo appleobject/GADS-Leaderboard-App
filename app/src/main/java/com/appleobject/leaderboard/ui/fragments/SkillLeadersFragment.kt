@@ -77,7 +77,7 @@ class SkillLeadersFragment : Fragment() {
 
     private fun initSkillRecycler(view: View) {
         view.recyclerSkills.apply {
-            val skillAdapter = SkillAdapter()
+            skillAdapter = SkillAdapter()
             adapter = skillAdapter
             layoutManager = LinearLayoutManager(view.context)
         }

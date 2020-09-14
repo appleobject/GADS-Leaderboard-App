@@ -65,8 +65,8 @@ class LearningLeadersFragment : Fragment() {
 
     private fun initRecyclerView(view: View) {
         view.recyclerLearner.apply {
-            val adapterLearn = LearnerAdapter()
-            adapter = adapterLearn
+             learnAdapter = LearnerAdapter()
+            adapter = learnAdapter
             layoutManager = LinearLayoutManager(context)
         }
 
