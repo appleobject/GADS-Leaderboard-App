@@ -50,8 +50,9 @@ class SkillLeadersFragment : Fragment() {
         // Inflate the layout for this fragment
       val view = inflater.inflate(R.layout.fragment_skill_leaders, container, false)
 
-        passData()
+
         initSkillRecycler(view)
+        passData()
         return view
     }
 
